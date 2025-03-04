@@ -1,15 +1,27 @@
 
 class AddressBookContact {
-
     constructor(firstName, lastName, address, city, state, zip, phoneNumber, email){
-      this.firstName = firstName;
-      this.lastName = lastName;
-      this.address = address;
-      this.city = city;
-      this.state = state;
-      this.zip = zip;
-      this.phoneNumber = phoneNumber;
-      this.email = email;
-    }
-  
+        let nameRegex = new RegExp('^[A-Z][a-zA-Z]{2,}$')
+        let baseRegex = new RegExp('^[A-Za-z0-9]{4,}$')
+        let zipRegex = new RegExp('^[1-9][0-9]{5}$')
+        let phoneNumberRegex = new RegExp('^[5-9][0-9]{9}$')
+        let emailRegex = new RegExp('^[a-zA-Z0-9_.±]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$')
+    
+        if (!nameRegex.test(firstName) || !nameRegex.test(lastName)) throw new Error("Name should be atleast 3 characters long and should start with capital letter")
+        if (!baseRegex.test(address)) throw new Error("Address should be atleast 4 characters long")
+        if (!baseRegex.test(city)) throw new Error("City should be atleast 4 characters long")
+        if (!baseRegex.test(state)) throw new Error("State should be atleast 4 characters long")
+        if (!zipRegex.test(zip)) throw new Error("Enter a valid zip code")
+        if (!phoneNumberRegex.test(phoneNumber)) throw new Error("Enter a valid phone number")
+        if (!emailRegex.test(email)) throw new Error("Enter a valid email address")
+    
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.address = address;
+        this.city = city;
+        this.state = state;
+        this.zip = zip;
+        this.phoneNumber = phoneNumber;
+        this.email = email;
+      }
   }

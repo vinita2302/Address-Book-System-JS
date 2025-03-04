@@ -28,6 +28,10 @@ class AddressBook {
       return this.contacts.reduce(count => count + 1, 0);
     }
   
+    searchByCityOrState(city, state) {
+      return this.contacts.filter(c => c.city === city || c.state === state);
+    }
+  
   }
   
   class AddressBookContact {

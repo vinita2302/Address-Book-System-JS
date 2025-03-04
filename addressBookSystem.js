@@ -32,6 +32,10 @@ class AddressBook {
       return this.contacts.filter(c => c.city === city || c.state === state);
     }
   
+    viewByCityOrState(city, state) {
+      return this.contacts.filter(c => c.city === city || c.state === state);
+    }
+  
   }
   
   class AddressBookContact {

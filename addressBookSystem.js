@@ -36,6 +36,14 @@ class AddressBook {
       return this.contacts.filter(c => c.city === city || c.state === state);
     }
   
+    getNumberByCityOrState(city, state) {
+      let people = this.contacts.filter(c => c.city === city || c.state === state);
+      let peoplePhoneNumber = people.map((person) => {
+        return person.phoneNumber
+      })
+      return peoplePhoneNumber;
+    }
+  
   }
   
   class AddressBookContact {

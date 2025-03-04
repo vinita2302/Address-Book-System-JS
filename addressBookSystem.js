@@ -43,11 +43,11 @@ class AddressBook {
       })
       return peoplePhoneNumber;
     }
-  
+
     sortByName() {
       return this.contacts.sort((a, b) => a.firstName.localeCompare(b.firstName));
     };
-  
+
   }
   
   class AddressBookContact {

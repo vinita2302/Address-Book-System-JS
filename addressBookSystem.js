@@ -1,6 +1,7 @@
 
 class AddressBookContact {
 
+
     constructor(){
         this.contacts = [];
       }
@@ -14,6 +15,9 @@ class AddressBookContact {
     class AddressBookContact {
       
       constructor(firstName, lastName, address, city, state, zip, phoneNumber, email){
+
+    constructor(firstName, lastName, address, city, state, zip, phoneNumber, email){
+
         let nameRegex = new RegExp('^[A-Z][a-zA-Z]{2,}$')
         let baseRegex = new RegExp('^[A-Za-z0-9]{4,}$')
         let zipRegex = new RegExp('^[1-9][0-9]{5}$')

@@ -43,6 +43,7 @@ class AddressBook {
       })
       return peoplePhoneNumber;
     }
+
   
     sortByName() {
       return this.contacts.sort((a, b) => a.firstName.localeCompare(b.firstName));
@@ -52,6 +53,13 @@ class AddressBook {
       return this.contacts.sort((a, b) => a[key].localeCompare(b[key]));
     };
   
+
+
+    sortByName() {
+      return this.contacts.sort((a, b) => a.firstName.localeCompare(b.firstName));
+    };
+
+
   }
   
   class AddressBookContact {
